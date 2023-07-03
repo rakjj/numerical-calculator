@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jacobi Method Calculator</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .input-side {
+            width: 400px;
+        }
+
+        .output-side {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-side">
+            <a href="rootfinding.html">Go Back</a>
+            <h1>Jacobi Method Calculator</h1>
+
+            <label for="matrixA">Matrix A:</label>
+            <textarea id="matrixA" rows="4" cols="30" placeholder="Enter matrix A (one row per line)"
+                required></textarea>
+            <br><br>
+
+            <label for="vectorB">Vector b:</label>
+            <input type="text" id="vectorB" placeholder="Enter vector b (space-separated values)" required>
+            <br><br>
+
+            <label for="initialApproximations">Initial Approximations:</label>
+            <input type="text" id="initialApproximations"
+                placeholder="Enter initial approximations (space-separated values)" required>
+            <br><br>
+
+            <label for="tolerance">Tolerance:</label>
+            <input type="number" id="tolerance" step="any" required>
+            <br><br>
+
+            <button id="jacobi">Calculate</button>
+            <br><br>
+
+            <h2>Result:</h2>
+            <textarea id="result" rows="3" cols="50" readonly></textarea>
+            <br><br>
+        </div>
+
+        <div class="output-side">
+            <h2>Iteration Table:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Iteration</th>
+                        <th>x</th>
+                        <th>y</th>
+                        <th>z</th>
+                    </tr>
+                </thead>
+                <tbody id="iteration-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="jacobi.js"></script>
+</body>
+
+</html>

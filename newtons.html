@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Newton's Method Calculator</title>
+    <style>
+        .container {
+            border: dotted 1px red;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .input-side {
+            border: dotted 1px red;
+            margin-right: 50px;
+        }
+
+        .output-side {
+            border: dotted 1px red;
+            flex-basis: 50%;
+
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-side">
+            <a href="openmethod.html">Go Back</a>
+            <h1>Newton's Method Calculator</h1>
+            <label for="equation">Equation:</label>
+            <input type="text" id="equation" placeholder="Enter the equation" />
+            <br /><br />
+
+            <label for="x0">Initial Value (x<sub>0</sub>):</label>
+            <input type="text" id="x0" placeholder="Enter the initial value" />
+            <br /><br />
+
+            <label for="precision">Precision:</label>
+            <input type="text" id="precision" placeholder="Enter the precision" />
+            <br /><br />
+
+            <button id="newton">Calculate</button>
+            <br /><br />
+
+            <h2>Result:</h2>
+            <textarea id="result" rows="3" cols="50" readonly></textarea>
+            <br /><br />
+        </div>
+        <div class="output-side">
+            <h3>Iteration Details:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Iteration</th>
+                        <th>x<sub>n</sub></th>
+                        <th>f(x<sub>n</sub>)</th>
+                        <th>f'(x<sub>n</sub>)</th>
+                        <th>x<sub>n+1</sub></th>
+                    </tr>
+                </thead>
+                <tbody id="iteration-table"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="newtons.js"></script>
+</body>
+
+</html>
