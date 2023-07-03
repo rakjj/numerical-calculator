@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+  }
+  
+  .left-half{
+    margin-right: 50px;
+  }
+  .right-half {
+    flex-basis: 50%;
+    /* Add additional styling as needed */
+  }

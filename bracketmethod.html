@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bracketstyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <a href="rootfinding.html">Go back</a>
+            <h2>Bracket Method Calculator</h2>
+            <p>Enter equation:</p>
+            <input type="text" placeholder="use x as a variable" id="equation"/><br>
+            <p>Initial value for Xₗ:</p>
+            <input type="number" placeholder="" id="xl"/>
+            <p>Initial value for Xᵣ:</p>
+            <input type="number" placeholder="" id="xr"/><br>
+            <p>Enter the precision:</p>
+            <input type="number" placeholder="" id="precision"/>
+            <div>
+                <button id="bisection">Bisection Method</button>
+                <button id="falsi">False-Position Method</button>
+            </div>
+          </div>
+        <div class="right-half">
+            <div class="iteration-table">
+                <p>Iteration table:</p>
+                <table id="iteration-table">
+                    <thead>
+                        <tr>
+                            <th>i</th>
+                            <th>Xₗ</th>
+                            <th>Xᵣ</th>
+                            <th>Xₘ</th>
+                            <th>f(Xₗ)</th>
+                            <th>f(Xᵣ)</th>
+                            <th>f(Xₘ)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="result">
+                <input type="text" readonly id="result">
+            </div>
+        </div>
+
+    </div>
+    <script src="bracketmethod.js"></script>
+</body>
+</html>
