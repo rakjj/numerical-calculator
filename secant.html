@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Secant Method Calculator</title>
+    <style>
+        .container {
+            border: dotted 1px red;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .input-side {
+            border: dotted 1px red;
+            margin-right: 50px;
+        }
+
+        .output-side {
+            border: dotted 1px red;
+            flex-basis: 50%;
+
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-side">
+            <a href="openmethod.html">Go Back</a>
+            <h1>Secant Method Calculator</h1>
+
+            <label for="equation">Equation:</label>
+            <input type="text" id="equation" placeholder="Enter equation" required>
+            <br><br>
+
+            <label for="x0">Initial Value (x0):</label>
+            <input type="number" id="x0" step="any" required>
+            <br><br>
+
+            <label for="x1">Initial Value (x1):</label>
+            <input type="number" id="x1" step="any" required>
+            <br><br>
+
+            <label for="precision">Precision:</label>
+            <input type="number" id="precision" step="any" required>
+            <br><br>
+
+            <button id="secant">Calculate</button>
+            <br><br>
+
+            <h2>Result:</h2>
+            <textarea id="result" rows="3" cols="50" readonly></textarea>
+            <br><br>
+        </div>
+
+        <div class="output-side">
+            <h2>Iteration Table:</h2>
+            <table id="iteration-table">
+                <thead>
+                    <tr>
+                        <th>Iteration</th>
+                        <th>x0</th>
+                        <th>x1</th>
+                        <th>x2</th>
+                        <th>f(x0)</th>
+                        <th>f(x1)</th>
+                        <th>f(x2)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="secant.js"></script>
+</body>
+
+</html>
