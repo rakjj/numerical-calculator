@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>Bisection & Falsi Method Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bracketstyles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="left-half">
-            <a href="rootfinding.html">Go back</a>
-            <h2>Bracket Method Calculator</h2>
+            <a href="index.html">Go back</a>
+            <br><br>
+            <h1>Bisection & Falsi Method Calculator</h1>
             <p>Enter equation:</p>
-            <input type="text" placeholder="use x as a variable" id="equation"/><br>
+            <input type="text" placeholder="use x as a variable" id="equation" /><br>
             <p>Initial value for Xₗ:</p>
-            <input type="number" placeholder="" id="xl"/>
+            <input type="number" placeholder="" id="xl" />
             <p>Initial value for Xᵣ:</p>
-            <input type="number" placeholder="" id="xr"/><br>
+            <input type="number" placeholder="" id="xr" /><br>
             <p>Enter the precision:</p>
-            <input type="number" placeholder="" id="precision"/>
-            <div>
+            <input type="number" placeholder="" id="precision" />
+            <div class="button-container">
                 <button id="bisection">Bisection Method</button>
                 <button id="falsi">False-Position Method</button>
             </div>
-          </div>
+            <div class="result">
+                <input type="text" readonly id="result">
+            </div>
+        </div>
         <div class="right-half">
             <div class="iteration-table">
                 <p>Iteration table:</p>
@@ -42,12 +48,46 @@
                     <tbody></tbody>
                 </table>
             </div>
-            <div class="result">
-                <input type="text" readonly id="result">
-            </div>
         </div>
-
     </div>
+
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Numerical and Symbolic Computation</a>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-1')">IEEE754 &#9662;</a>
+                <div id="dropdown-1" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a href="IEEE754.html">IEEE754</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-2')">Root Finding &#9662;</a>
+                <div id="dropdown-2" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-2')">
+                    <a href="newtons.html">Newton's Rhapson Method</a>
+                    <a href="secant.html">Secant Method</a>
+                    <a href="bracketmethod.html">Bisection & Falsi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-3')">Iterative Method &#9662;</a>
+                <div id="dropdown-3" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-3')">
+                    <a href="jacobi.html">Jacobi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-4')">Help &#9662;</a>
+                <div id="dropdown-4" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a>Use "**" to have an exponent</a>
+                    <a>Use "*" to make the number and</a>
+                    <a>variable to be joined together</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script src="index.js"></script>
     <script src="bracketmethod.js"></script>
 </body>
+
 </html>

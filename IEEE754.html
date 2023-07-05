@@ -1,23 +1,71 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>IEEE 754 32 bit</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <a href="index.html">Go back</a>
-        <h2>IEEE754 Calculator</h2>
-        <input type="number" placeholder="Enter decimal" id="num1"/>
-        <div>
-            <button id="32bit">32bit</button>
-            <button id="64bit">64bit</button>
+
+    <div class="container-ieee">
+        <a class="ieee-a" href="index.html">Go back</a>
+        <h2 class="ieee-h2">IEEE754 Calculator</h2>
+        <input class="input-ieee" type="number" placeholder="Enter decimal" id="num1" />
+        <div class="button-container">
+            <button class="bit-button" id="32bit">32bit</button>
+            <button class="bit-button" id="64bit">64bit</button>
         </div>
         <div class="result">
-            <input type="text" readonly id="result">
+            <input class="result-ieee" readonly id="result" placeholder="Conversion result">
         </div>
     </div>
+
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Numerical and Symbolic Computation</a>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-1')">IEEE754 &#9662;</a>
+                <div id="dropdown-1" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a href="IEEE754.html">IEEE754</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-2')">Root Finding &#9662;</a>
+                <div id="dropdown-2" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-2')">
+                    <a href="newtons.html">Newton's Rhapson Method</a>
+                    <a href="secant.html">Secant Method</a>
+                    <a href="bracketmethod.html">Bisection & Falsi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-3')">Iterative Method &#9662;</a>
+                <div id="dropdown-3" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-3')">
+                    <a href="jacobi.html">Jacobi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-4')">Help &#9662;</a>
+                <div id="dropdown-4" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a>Use "**" to have an exponent</a>
+                    <a>Use "*" to make the number and</a>
+                    <a>variable to be joined together</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
     <script src="IEEEE.js"></script>
+    <script src="index.js"></script>
+
 </body>
+
 </html>

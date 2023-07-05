@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8" />
     <title>Numerical and Symbolic Computation</title>
 </head>
+
 <body>
-    <h2> Welcome to Numerical and Symbolic Computation Calculators</h2>
-    <h3>List of Calculators</h3>
-    <div>
-        <a href="IEEE754.html">IEEE754</a>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Numerical and Symbolic Computation</a>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-1')">IEEE754 &#9662;</a>
+                <div id="dropdown-1" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a href="IEEE754.html">IEEE754</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-2')">Root Finding &#9662;</a>
+                <div id="dropdown-2" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-2')">
+                    <a href="newtons.html">Newton's Rhapson Method</a>
+                    <a href="secant.html">Secant Method</a>
+                    <a href="bracketmethod.html">Bisection & Falsi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-3')">Iterative Method &#9662;</a>
+                <div id="dropdown-3" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-3')">
+                    <a href="jacobi.html">Jacobi Method</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div style="margin-top: 50px; margin-left: 20px;">
+        <h2>Welcome to Numerical and Symbolic Computation Calculators</h2>
+        <!-- The rest of your content goes here -->
     </div>
-    <div>
-        <a href="rootfinding.html">Root Finding</a>
-    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
