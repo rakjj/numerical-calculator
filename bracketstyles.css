@@ -1,11 +1,97 @@
 .container {
-    display: flex;
-  }
-  
-  .left-half{
-    margin-right: 50px;
-  }
-  .right-half {
-    flex-basis: 50%;
-    /* Add additional styling as needed */
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Styles for the left-half */
+.left-half {
+  width: 550px;
+  height: 600px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.left-half a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.left-half h2 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.left-half p {
+  margin-bottom: 5px;
+}
+
+.left-half input[type="text"],
+.left-half input[type="number"] {
+  width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.left-half div {
+  margin-top: 10px;
+}
+
+.left-half button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.left-half button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the right-half */
+.right-half {
+  width: 550px;
+  height: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.iteration-table {
+  margin-bottom: 20px;
+}
+
+.iteration-table p {
+  margin-bottom: 5px;
+}
+
+.iteration-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.iteration-table table th,
+.iteration-table table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.result input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

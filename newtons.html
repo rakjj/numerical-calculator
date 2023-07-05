@@ -3,47 +3,15 @@
 
 <head>
     <title>Newton's Method Calculator</title>
-    <style>
-        .container {
-            border: dotted 1px red;
-            display: flex;
-            justify-content: center;
+    <link rel="stylesheet" href="styles.css">
 
-        }
-
-        .input-side {
-            border: dotted 1px red;
-            margin-right: 50px;
-        }
-
-        .output-side {
-            border: dotted 1px red;
-            flex-basis: 50%;
-
-        }
-
-        table {
-            border-collapse: collapse;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        th,
-        td {
-            padding: 5px;
-            text-align: left;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-newtons">
         <div class="input-side">
-            <a href="openmethod.html">Go Back</a>
+            <a href="index.html">Go Back</a>
+            <br /><br />
             <h1>Newton's Method Calculator</h1>
             <label for="equation">Equation:</label>
             <input type="text" id="equation" placeholder="Enter the equation" />
@@ -56,12 +24,12 @@
             <label for="precision">Precision:</label>
             <input type="text" id="precision" placeholder="Enter the precision" />
             <br /><br />
-
-            <button id="newton">Calculate</button>
+            <div class="button-container">
+                <button id="newton">Calculate</button>
+            </div>
             <br /><br />
 
-            <h2>Result:</h2>
-            <textarea id="result" rows="3" cols="50" readonly></textarea>
+            <input id="result" rows="3" cols="50" readonly placeholder="Result">
             <br /><br />
         </div>
         <div class="output-side">
@@ -80,6 +48,43 @@
             </table>
         </div>
     </div>
+
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Numerical and Symbolic Computation</a>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-1')">IEEE754 &#9662;</a>
+                <div id="dropdown-1" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a href="IEEE754.html">IEEE754</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-2')">Root Finding &#9662;</a>
+                <div id="dropdown-2" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-2')">
+                    <a href="newtons.html">Newton's Rhapson Method</a>
+                    <a href="secant.html">Secant Method</a>
+                    <a href="bracketmethod.html">Bisection & Falsi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-3')">Iterative Method &#9662;</a>
+                <div id="dropdown-3" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-3')">
+                    <a href="jacobi.html">Jacobi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-4')">Help &#9662;</a>
+                <div id="dropdown-4" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a>Use "**" to have an exponent</a>
+                    <a>Use "*" to make the number and</a>
+                    <a>variable to be joined together</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script src="index.js"></script>
     <script src="newtons.js"></script>
 </body>
 

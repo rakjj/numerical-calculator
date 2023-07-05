@@ -1,29 +1,471 @@
-#result {
-    width: 500px;
-    height: 50px;
-  }
-.container {
-    justify-content: center;
-    align-items: center;
-}
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* CSS for the navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #007BFF;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-header a {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-item a {
+  display: block;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.dropdown-content[id="dropdown-4"] {
+  margin-left: -150px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  background-color: #F1F1F1;
+  width: 200px;
+  padding: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /* Adjust the value as needed */
+}
+
+.dropdown-content a {
+  width: max-content;
+  display: block;
+  color: #000000;
+  font-size: 14px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.navbar-item:hover .dropdown-content {
+  display: block;
+}
+
+/* ieee styles */
+.container-ieee {
+  width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ieee-a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.ieee-h2 {
+  text-align: center;
+  color: #007bff;
+  margin-top: 0;
+}
+
+.input-ieee {
+  width: 550px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bit-button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.bit-button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result-ieee {
+  width: 550px !important;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* newtons style */
+.container-newtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+
+/* Styles for the input-side */
+.input-side {
+  width: 550px;
+  height: 600px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-side a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.input-side h1 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.input-side label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-side input[type="text"] {
+  width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.input-side button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.input-side button:hover {
+  background-color: #0056b3;
+}
+
+.input-side h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.input-side input[id="result"] {
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  text-align: center;
+}
+
+/* Styles for the output-side */
+.output-side {
+  width: 500px;
+  height: 620px;
+  margin-left: 40px;
+  overflow: auto;
+}
+
+.output-side h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.output-side table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.output-side table th,
+.output-side table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* secant styles */
+.container-secant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Styles for the input-side-secant */
+.input-side-secant {
+  width: 550px;
+  height: 600px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-side-secant a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.input-side-secant h1 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.input-side-secant label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-side-secant input[type="text"],
+.input-side-secant input[type="number"] {
+  width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.input-side-secant button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.input-side-secant button:hover {
+  background-color: #0056b3;
+}
+
+.input-side-secant h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.input-side-secant input[id="result"] {
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  text-align: center;
+}
+
+/* Styles for the output-side-secant */
+.output-side-secant {
+  margin-left: 40px;
+  width: 550px;
+  height: 600px;
+  overflow: auto;
+}
+
+.output-side-secant h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.output-side-secant table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.output-side-secant table th,
+.output-side-secant table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* jacobi style */
+.container-jacobi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Styles for the input-side-jacobi */
+.input-side-jacobi {
+  width: 550px;
+  height: 650px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-side-jacobi a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.input-side-jacobi h1 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.input-side-jacobi label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-side-jacobi input[type="text"],
+.input-side-jacobi input[type="number"] {
+  width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.input-side-jacobi button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.input-side-jacobi button:hover {
+  background-color: #0056b3;
+}
+
+.input-side-jacobi h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.input-side-jacobi textarea {
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  resize: none
+}
+
+.input-side-jacobi input[id="result"] {
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  text-align: center;
+}
+
+
+/* Styles for the output-side-jacobi */
+.output-side-jacobi {
+  width: 550px;
+  height: 600px;
+  margin-left: 40px;
+}
+
+.output-side-jacobi h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.output-side-jacobi table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.output-side-jacobi table th,
+.output-side-jacobi table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}

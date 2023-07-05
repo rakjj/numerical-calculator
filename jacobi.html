@@ -3,45 +3,13 @@
 
 <head>
     <title>Jacobi Method Calculator</title>
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        th,
-        td {
-            padding: 5px;
-            text-align: left;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .input-side {
-            width: 400px;
-        }
-
-        .output-side {
-            width: 400px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="input-side">
-            <a href="rootfinding.html">Go Back</a>
+    <div class="container-jacobi">
+        <div class="input-side-jacobi">
+            <a href="index.html">Go Back</a>
             <h1>Jacobi Method Calculator</h1>
 
             <label for="matrixA">Matrix A:</label>
@@ -58,19 +26,19 @@
                 placeholder="Enter initial approximations (space-separated values)" required>
             <br><br>
 
-            <label for="tolerance">Tolerance:</label>
-            <input type="number" id="tolerance" step="any" required>
+            <label for="tolerance">Precision:</label>
+            <input type="number" id="tolerance" step="any" required placeholder="Enter Precision (Ex. 0.001)">
+            <br><br>
+            <div class="button-container">
+                <button id="jacobi">Calculate</button>
+            </div>
             <br><br>
 
-            <button id="jacobi">Calculate</button>
-            <br><br>
-
-            <h2>Result:</h2>
-            <textarea id="result" rows="3" cols="50" readonly></textarea>
+            <input id="result" rows="3" cols="50" readonly placeholder="Result">
             <br><br>
         </div>
 
-        <div class="output-side">
+        <div class="output-side-jacobi">
             <h2>Iteration Table:</h2>
             <table>
                 <thead>
@@ -87,6 +55,42 @@
         </div>
     </div>
 
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Numerical and Symbolic Computation</a>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-1')">IEEE754 &#9662;</a>
+                <div id="dropdown-1" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a href="IEEE754.html">IEEE754</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-2')">Root Finding &#9662;</a>
+                <div id="dropdown-2" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-2')">
+                    <a href="newtons.html">Newton's Rhapson Method</a>
+                    <a href="secant.html">Secant Method</a>
+                    <a href="bracketmethod.html">Bisection & Falsi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-3')">Iterative Method &#9662;</a>
+                <div id="dropdown-3" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-3')">
+                    <a href="jacobi.html">Jacobi Method</a>
+                </div>
+            </li>
+            <li class="navbar-item dropdown">
+                <a href="#" onmouseover="toggleDropdown(event, 'dropdown-4')">Help &#9662;</a>
+                <div id="dropdown-4" class="dropdown-content" onmouseover="toggleDropdown(event, 'dropdown-1')">
+                    <a>Use "**" to have an exponent</a>
+                    <a>Use "*" to make the number and</a>
+                    <a>variable to be joined together</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script src="index.js"></script>
     <script src="jacobi.js"></script>
 </body>
 
