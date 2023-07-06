@@ -4,7 +4,10 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  font-family: Arial, sans-serif;
 }
+
+
 
 /* CSS for the navbar */
 .navbar {
@@ -57,7 +60,7 @@ body {
   justify-content: center;
   text-align: center;
   background-color: #F1F1F1;
-  width: 200px;
+  width: 220px;
   padding: 10px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -138,7 +141,7 @@ body {
 }
 
 .result-ieee {
-  width: 550px !important;
+  width: 560px !important;
   padding: 10px;
   margin-left: 10px;
   font-size: 16px;
